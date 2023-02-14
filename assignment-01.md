@@ -2,7 +2,7 @@
 
 # CMPS 2200 Assignment 1
 
-**Name:**_________________________
+**Name:**____Sam DeMarinis____
 
 
 In this assignment, you will learn more about asymptotic notation, parallelism, functional languages, and algorithmic cost models. As in the recitation, some of your answer will go here and some will go in `main.py`. You are welcome to edit this `assignment-01.md` file directly, or print and fill in by hand. If you do the latter, please scan to a file `assignment-01.pdf` and push to your github repository. 
@@ -13,35 +13,35 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 
   - 1a. Is $2^{n+1} \in O(2^n)$? Why or why not? 
 .  
-.  
+.  Yes. O(2^n)$ is the set of functions that have smaller end behavior than 2^n. There are multiple values of c, a constant number, such that 2^(n+1) is less than or equal to c*(2^n). 
 .  
 .  
 . 
   - 1b. Is $2^{2^n} \in O(2^n)$? Why or why not?     
 .  
-.  
+.  No. O(2^n)$ is the set of functions that have smaller end behavior than 2^n. There is no constant c value for which $2^{2^n} is less than or equal to c*(2^n). If we make c = 2^x, then we have the inequality such that $2^{2^n} is less than or equal to 2^(n+x). We can more clearly see that there is no value of x for which this is always true for any value of n, because 2^x is exponential and n + x is linear.
 .  
 .  
 .  
   - 1c. Is $n^{1.01} \in O(\mathrm{log}^2 n)$?    
 .  
-.  
+    No
 .  
 .  
 
   - 1d. Is $n^{1.01} \in \Omega(\mathrm{log}^2 n)$?  
 .  
-.  
+.  Yes
 .  
 .  
   - 1e. Is $\sqrt{n} \in O((\mathrm{log} n)^3)$?  
 .  
-.  
+.  No
 .  
 .  
   - 1f. Is $\sqrt{n} \in \Omega((\mathrm{log} n)^3)$?  
 .  
-
+  Yes
 
 2. **SPARC to Python** (12 pts)
 
@@ -63,7 +63,7 @@ $$
   - 2b. (6 pts) What does this function do, in your own words?  
 
 .  
-.  
+.  This function takes in an integer x, that acts like an index, and returns the Fibonacci number at the xth index in the sequence. For example, if you call foo(4), it will return 3 because this is the number at the 4th index in the sequence.
 .  
 .  
 .  
@@ -93,12 +93,7 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
   - 3b. (4 pts) What is the Work and Span of this implementation?  
 
 .  
-.  
-.  
-.  
-.  
-.  
-.  
+.  The work and span of this implementation is O(n).
 .  
 .  
 

@@ -5,12 +5,32 @@ See assignment-01.pdf for details.
 # no imports needed.
 
 def foo(x):
-    ### TODO
-    pass
+  
+  if x <= 1:
+    return x
+    
+  else:
+    return foo(x-1) + foo(x-2)
+
+
+  
 
 def longest_run(mylist, key):
-    ### TODO
-    pass
+
+    counter1 = 0
+    counter2 = 0
+
+    for num in mylist:
+      if num == key:
+        counter1 += 1
+      else:
+        counter1 = 0
+      if counter1 > counter2:
+        counter2 = counter1
+
+    return counter2
+
+      
 
 
 class Result:
@@ -33,5 +53,3 @@ def longest_run_recursive(mylist, key):
 ## Feel free to add your own tests here.
 def test_longest_run():
     assert longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3
-
-
